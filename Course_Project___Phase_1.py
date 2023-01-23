@@ -25,7 +25,6 @@ def GetTaxRate():
  return taxRate
 
 
-
 def CalcTaxAndNetPay(hours, hourlyrate, taxrate):
     grosspay = hours * hourlyrate
     incometax = grosspay * taxrate
@@ -54,7 +53,7 @@ def PrintTotals(TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay):
     print(f"Total Net Pay: ${TotNetPay:,.2f}")
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
 
     TotEmployees = 0
     TotHours = 0.00
@@ -80,8 +79,6 @@ if __name__ == "_main_":
         TotGrossPay += grosspay
         TotTax += incometax
         TotNetPay += netpay
-
-
 
     PrintTotals (TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay)
 
